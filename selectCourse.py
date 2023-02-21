@@ -4,7 +4,7 @@ import requests
 # 学号，需要修改
 student_id='2051912'
 # 浏览器内查看的sessionid，需要修改（填充）14c
-cookies={"sessionid":"14c047a8f28d4f59ab3bd6d15e512fca"}
+cookies={"sessionid":"ccb65c86b61946f2991c2e618be0cfd8"}
 # 需要捡漏的课程，需要修改（填充）
 target_teachClassCode={'42036102'}
 
@@ -15,8 +15,8 @@ electUrl = 'https://1.tongji.edu.cn/api/electionservice/student/elect'
 electResUrl = 'https://1.tongji.edu.cn/api/electionservice/student/5276/electRes'
 
 # 体育课选择接口，需要修改，从浏览器开发者模式获取接口
-getTeachClass4Limit='https://1.tongji.edu.cn/api/electionservice/student/getTeachClass4Limit?roundId=5276&courseCode=420361&studentId=2051912&calendarId=115'
-
+# getTeachClass4Limit='https://1.tongji.edu.cn/api/electionservice/student/getTeachClass4Limit?roundId=5276&courseCode=420361&studentId='+student_id+'&calendarId=115'
+getTeachClass4Limit='https://1.tongji.edu.cn/api/electionservice/student/getTeachClass4Limit?roundId=5276&courseCode=320004&studentId='+student_id+'&calendarId=115'
 
 class SelectClass():
   def __init__(self):
@@ -72,6 +72,7 @@ if __name__=='__main__':
   a.getAllPE()
   i=1
   while(1):
+    time.sleep(1)
     print('第'+str(i)+'轮申请课程')
     a.requestPE()
     i+=1
