@@ -20,3 +20,6 @@ student_id，cookies中的sessionid，`target_teachClassCode`，分别代表学�
 每一轮遍历`target_teachClassCode`逐一提交课程申请，每一轮会有提示当前轮数，每次提交会给出提交课程的信息及结果，当选中课程后，给出提示，结束程序。
 
 ## 如果觉得还行可以star
+
+## 2024-1-4补充
+据反馈，本次选课中calendarId，round_id，electResUrl有改变，使用请注意需要自行改动
